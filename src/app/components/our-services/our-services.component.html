@@ -1,0 +1,20 @@
+<div class="our-services-container">
+  <h2>Our Services</h2>
+  <p>
+    At Ever North Limited, you will have full access to the best products and
+    services from lenders and insurers from all across the UK financial market.
+    We provide the answers to all your financial needs, helping you to continue
+    your onward growth.
+  </p>
+
+  <div class="service-row" *ngFor="let service of services">
+    <div class="service-icon">
+      <img src="path/to/your/icon.png" alt="Service Icon" />
+      <!-- Adjust the icon path -->
+    </div>
+    <div class="service-info">
+      <h3>{{ service.title }}</h3>
+      <p>{{ service.description }}</p>
+    </div>
+  </div>
+</div>

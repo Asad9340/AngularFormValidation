@@ -1,0 +1,35 @@
+.our-services-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.service-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.service-icon img {
+  width: 50px; /* Adjust size as needed */
+}
+
+.service-info h3 {
+  color: #029aaf;
+  margin-bottom: 5px;
+}
+
+.service-info p {
+  text-align: left;
+}
+@media (max-width: 768px) {
+  .service-row {
+    grid-template-columns: 1fr;
+  }
+
+  .service-info p {
+    text-align: center;
+  }
+}

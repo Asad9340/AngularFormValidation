@@ -1,0 +1,215 @@
+.carousel-section-container{
+  margin-top: 100px;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  min-width: 1472px;
+  height: 550px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide.active {
+  left: 0;
+  transform: translateX(0);
+}
+
+.carousel-slide.prev {
+  left: -100%;
+  transform: translateX(0);
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-text {
+  max-width: 648px;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  color: white;
+  text-align: left;
+}
+
+.carousel-text h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 52px;
+  margin-bottom: 24px;
+}
+
+.carousel-text .join-us-button {
+  background-color: #2563eb;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-text .join-us-button:hover {
+  background-color: #027a8a;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.carousel-button.prev {
+  left: 0;
+}
+
+.carousel-button.next {
+  right: 0;
+}
+
+.carousel-pagination {
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+
+.carousel-pagination span {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.carousel-pagination span.active {
+  background-color: #029aaf;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .carousel-container {
+    height: 450px;
+  }
+
+  .carousel-text h2 {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  .join-us-button {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+
+  .carousel-button {
+    padding: 8px;
+  }
+
+  .carousel-pagination span {
+    height: 12px;
+    width: 12px;
+  }
+}
+
+@media (max-width: 992px) {
+  .carousel-container {
+    height: 350px;
+  }
+
+  .carousel-text h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .join-us-button {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  .carousel-button {
+    padding: 6px;
+  }
+
+  .carousel-pagination span {
+    height: 10px;
+    width: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-container {
+    height: 250px;
+  }
+
+  .carousel-text h2 {
+    font-size: 30px;
+    line-height: 38px; /* Adjusted line height */
+  }
+
+  .join-us-button {
+    padding: 8px 15px; /* Adjusted padding */
+    font-size: 10px;
+  }
+
+  .carousel-button {
+    padding: 4px;
+  }
+
+  .carousel-pagination span {
+    height: 8px;
+    width: 8px;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-container {
+    height: 200px;
+  }
+
+  .carousel-text h2 {
+    font-size: 30px; /* Adjusted font size */
+    line-height: 38px; /* Adjusted line height */
+  }
+
+  .join-us-button {
+    padding: 8px 15px; /* Adjusted padding */
+    font-size: 8px;
+  }
+
+  .carousel-button {
+    padding: 2px;
+  }
+
+  .carousel-pagination span {
+    height: 6px;
+    width: 6px;
+  }
+}

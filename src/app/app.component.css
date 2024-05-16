@@ -1,4 +1,141 @@
-.title{
-  color: red;
-  font-size: 50px;
+.contactContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.contactImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 0;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 40px;
+}
+
+.contactContent {
+  padding: 20px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.contactHeading {
+  color: var(--Black-900, #18181b);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+.contactParagraph {
+  color: var(--Black-600, #52525b);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-bottom: 5px;
+}
+.hrLine {
+  max-width: 1128px;
+  margin: 40px auto;
+}
+
+.termsPrivacy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.termsPrivacyItem {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  border-left: 1px solid #d3d3d5;
+  padding: 0 12px;
+}
+.termsPrivacyItem1 {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 0 12px;
+}
+.socialIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.footerContent {
+  max-width: 936px;
+  margin: 0 auto;
+}
+
+.footerCenterAlign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footerContentParagraph {
+  font-size: 12px;
+  font-style: normal;
+  line-height: 18px;
+  margin-bottom: 16px;
+}
+.copyright {
+  padding-bottom: 48px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+@media screen and (max-width: 600px) {
+  .contactContainer {
+    margin: 0 20px;
+  }
+  .contactImg {
+    display: flex;
+    justify-content: start;
+    padding-left: 0px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  .contactContainer {
+    margin: 0 20px;
+  }
+  .contactImg {
+    display: flex;
+    justify-content: start;
+    padding-left: 0px;
+  }
+  .contactContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .contactContainer {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .contactImg {
+    padding-right: 20px;
+    border-bottom: none;
+  }
+
+  .contactContent {
+    padding: 20px;
+    margin: 20px;
+    border-left: 1px solid #e0e0e0;
+    border-bottom: none;
+  }
+  .footerContent {
+    padding: 0 30px;
+  }
 }
