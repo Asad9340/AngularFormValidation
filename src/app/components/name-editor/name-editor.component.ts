@@ -6,7 +6,6 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-name-editor',
@@ -29,7 +28,6 @@ export class NameEditorComponent {
     salary: new FormControl('', Validators.required),
     designation: new FormControl('', Validators.required),
   });
-  constructor(private router: Router) {}
   onSubmit() {
     this.employeesList.push(this.employeeForm.value);
     this.employeeForm.reset();

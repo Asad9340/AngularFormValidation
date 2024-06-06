@@ -1,4 +1,4 @@
- <!-- (ngSubmit)="onSubmit()" -->
+<!-- (ngSubmit)="onSubmit()" -->
 <form [formGroup]="employeeForm">
   <div class="formContainer">
     <div class="tableRowFormate">
@@ -124,14 +124,13 @@
     </div>
     <div class="submitBtn">
       @if (isUpdate) {
-  <button class="btn" (click)="onUpdate()"lass="btn">Update</button>
-}@else {
-  <button  (click)="onSubmit()"  class="btn">Submit</button>
-}
+      <button class="btn" (click)="onUpdate()" lass="btn">Update</button>
+      }@else {
+      <button (click)="onSubmit()" class="btn">Submit</button>
+      }
     </div>
   </div>
 </form>
-
 
 @if (employeesList.length) {
 <div class="employeeTable">
@@ -158,8 +157,20 @@
       <td>{{ employee.country }}</td>
       <td>{{ employee.salary }}</td>
       <td>{{ employee.designation }}</td>
-      <td><button class="btn" (click)="handleUpdate(employee.email)">Update</button></td>
-      <td><button class="btn" (click)="handleDelete(employee.email)">Delete</button></td>
+      <td>
+        <button class="btn" (click)="handleUpdate(employee.email)">
+          Update
+        </button>
+      </td>
+      <td>
+        <button
+          style="background-color: red"
+          class="btn"
+          (click)="handleDelete(employee.email)"
+        >
+          Delete
+        </button>
+      </td>
     </tr>
     }
   </table>
