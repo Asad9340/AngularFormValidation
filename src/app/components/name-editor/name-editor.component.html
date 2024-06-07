@@ -176,3 +176,16 @@
   </table>
 </div>
 }
+
+
+<h1 style="text-align: center;">API Calling </h1>
+<div style="display: grid; grid-template-columns: repeat(2,1fr); gap: 20px;">
+  @for (news of newsList; track news.id) {
+    <div style="border: 1px solid black;padding: 10px; border-radius: 10px;">
+      <h2 style="font-size: 30px; padding: 20px 10px; background-color: gray; border-radius: 10px;text-align: center;">Title: {{news.title}}</h2>
+      <h2>Summary: {{news.summary}}</h2>
+      <h2>Link: <a [href]="news.link" target="_blank"> {{news.link}}</a> </h2>
+      <h2>Published: {{news.published}}</h2>
+    </div>
+  }
+</div>

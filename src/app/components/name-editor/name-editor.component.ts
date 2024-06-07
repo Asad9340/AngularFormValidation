@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { Component, Input, OnInit } from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -10,11 +11,12 @@ import {
 @Component({
   selector: 'app-name-editor',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule],
+  imports: [ReactiveFormsModule, CommonModule, HttpClientModule],
   templateUrl: './name-editor.component.html',
   styleUrl: './name-editor.component.css',
 })
-export class NameEditorComponent {
+export class NameEditorComponent implements OnInit {
+  newsList: any;
   isUpdate: boolean = false;
   indexValue!: number;
   @Input() employeesList: any[] = [];
@@ -60,5 +62,18 @@ export class NameEditorComponent {
       salary: this.employeesList[indexToUpdate].salary,
       designation: this.employeesList[indexToUpdate].designation,
     });
+  }
+
+  constructor(private http: HttpClient) {}
+  ngOnInit(): void {
+    this.fetchData();
+  }
+  public fetchData(): void {
+    this.http
+      .get('https://api.first.org/data/v1/news')
+      .subscribe((res: any) => {
+        console.log(res.data);
+        this.newsList = res.data;
+      });
   }
 }
