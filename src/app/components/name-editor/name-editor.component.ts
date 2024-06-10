@@ -4,6 +4,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import {
   FormControl,
   FormGroup,
+  FormsModule,
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
@@ -11,12 +12,13 @@ import {
 @Component({
   selector: 'app-name-editor',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule, HttpClientModule],
+  imports: [ReactiveFormsModule, FormsModule, CommonModule, HttpClientModule],
   templateUrl: './name-editor.component.html',
   styleUrl: './name-editor.component.css',
 })
 export class NameEditorComponent implements OnInit {
   newsList: any;
+  initValue='Asad'
   isUpdate: boolean = false;
   indexValue!: number;
   @Input() employeesList: any[] = [];
