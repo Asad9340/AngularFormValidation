@@ -7,6 +7,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { OurServicesComponent } from './components/our-services/our-services.component';
+import { Carousel2Component } from './components/carousel2/carousel2.component';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -18,7 +19,8 @@ import { OurServicesComponent } from './components/our-services/our-services.com
     MatButtonModule,
     MatToolbarModule,
     CarouselComponent,
-    OurServicesComponent
+    OurServicesComponent,
+    Carousel2Component
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
