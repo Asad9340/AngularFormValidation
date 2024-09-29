@@ -139,3 +139,20 @@
     padding: 0 30px;
   }
 }
+
+
+.box{
+  border: 1px solid red;
+}
+.parent{
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(12 , 1fr);
+  width: 800px;
+}
+
+.title {
+  display: inline-block;
+  max-width: 400px; /* Adjust as needed */
+  transition: all 0.3s ease;
+}
